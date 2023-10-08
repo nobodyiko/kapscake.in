@@ -1,0 +1,32 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+
+
+#breadcrumbs{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  li {
+    line-height: 25px;
+    display: inline-block;
+    list-style: none;
+    text-transform: capitalize;
+    a {
+      line-height: 25px;
+      display: inline-block;
+      color: #fff;
+      &:hover{
+        color: var(--thim_body_primary_color);
+      }
+    }
+    span.breadcrum-icon {
+      margin: 0 15px;
+    }
+  }
+}
+.layout-2 #breadcrumbs li a {
+  color: inherit;
+}

@@ -1,0 +1,518 @@
+.widget-area {
+	ul {
+		margin-left: 0;
+	}
+	aside {
+		overflow:      hidden;
+		margin-bottom: 25px;
+		&.widget_search-room{
+			overflow: visible;
+			&.thim-fixed{
+				&.fixed{
+					background-color: #FFF;
+				}
+			}
+		}
+		.widget-title {
+			position:       relative;
+			margin-bottom:  20px;
+			margin-top:     0;
+			font-weight:    700;
+			text-align:     center;
+			text-transform: uppercase;
+			span {
+				z-index:       9;
+				position:      relative;
+				padding-left:  0;
+				padding-right: 5px;
+			}
+			&:before {
+				content:    "";
+				position:   absolute;
+				left:       0;
+				right:      0;
+				height:     1px;
+				top:        50%;
+				background: $border-color;
+			}
+		}
+		ul li {
+			padding-top:    8px;
+			padding-bottom: 8px;
+			list-style:     none;
+			-webkit-transition: all 3s;
+			-moz-transition: all 3s;
+			-o-transition: all 3s;
+			-ms-transition: all 3s;
+			transition: all 3s;
+		}
+		select {
+			max-width: 100%;
+			width:     100%;
+			border:    1px solid $border-color;
+			padding:   6px 10px;
+			&:focus {
+				outline:    none;
+				box-shadow: 0 0 0;
+			}
+		}
+	}
+	.screen-reader-text {
+		display: none;
+	}
+}
+
+/* search */
+.search-form {
+	position: relative;
+	&:after {
+		content:  "\f002";
+		font:     normal normal normal 14px/1 FontAwesome;
+		position: absolute;
+		right:    13px;
+		top:      13px;
+	}
+	label {
+		width:       100%;
+		display:     inline-block;
+		font-weight: normal;
+		.screen-reader-text {
+			display: none
+		}
+		.search-field {
+			width:         100%;
+			border-radius: 0;
+			box-shadow:    none;
+			border:        1px solid #ddd;
+			padding:       5px 10px;
+		}
+		.search-submit {
+			margin-left:  0;
+			margin-right: 0;
+		}
+	}
+	.search-submit {
+		display: none;
+		margin:  0;
+		padding: 0 16px;
+	}
+}
+
+/* Blog Search */
+.widget.thim_search_widget {
+	a.widget-search-form {
+		cursor: pointer;
+	}
+}
+
+.widget_rss {
+	.rsswidget {
+		font-weight: bold;
+	}
+	.rss-date {
+		display:    block;
+		font-style: italic;
+		font-size:  90%;
+	}
+	cite {
+		color:       #000;
+		font-weight: bold;
+	}
+}
+
+.widget_categories, .widget_pages {
+	ul li {
+		border-bottom:  1px solid $border-color;
+		margin:  5px 0;
+		padding-bottom: 10px;
+		text-transform: none;
+		font-size:      16px;
+		font-weight:    500;
+		&:last-child {
+			border-bottom:  none;
+			padding-bottom: 0;
+			margin-bottom:  0;
+		}
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+}
+
+.widget_nav_menu {
+	ul ul {
+		margin: 0 0 0 25px;
+		li {
+			margin: 0;
+		}
+	}
+	li.menu-item-has-children {
+		padding-bottom: 0;
+	}
+}
+
+.widget_recent_entries {
+	ul li {
+		.post-date {
+			font-size:  $font-size-small;
+			font-style: italic;
+			display:    block;
+		}
+	}
+}
+
+.sidebar{
+	.widget{
+		margin-bottom: 35px;
+		&.widget_heading{
+			margin-bottom: 0;
+		}
+		.widget-title{
+			font-size: 24px;
+			font-weight: 600;
+			line-height: 30px;
+			text-transform: none;
+			&:before{
+				margin-top: -2px;
+			}
+			span {
+				display: inline-block;
+				padding: 0;
+				line-height: 30px;
+			}
+		}
+		&:first-child{
+			.widget-title{
+				margin-top: -3px;
+			}
+		}
+	}
+}
+.blog-layout-2 {
+	.theiaStickySidebar > .sidebar, #sidebar > .sidebar {
+		border: 1px solid $border-color;
+
+		> aside.widget {
+			padding: 30px;
+			border-bottom: 1px solid $border-color;
+			margin-bottom: 0;
+
+			.widget-title {
+				text-transform: uppercase;
+				font-size: 20px;
+				text-align: left;
+			}
+
+			.tagcloud {
+				display: flex;
+				flex-wrap: wrap;
+				column-gap: 10px;
+				row-gap: 10px;
+
+				a {
+					background-color: #E8F8FF;
+					padding: 3px 10px;
+					font-size: $font-size-small !important;
+					color: #4A5F67;
+	
+					&:hover {
+						background-color: $thim_body_primary_color;
+						color: #FFF;
+					}
+				}
+			}
+			&.widget_categories {
+				.cat-item {
+					font-weight: $thim_font_body_font_weight;
+					border: none;
+					&:hover {
+						color: #000;
+						a {
+							color: #000;
+						}
+					}
+				}
+			}
+			&.widget_search {
+				label .search-field {
+					font-size: $font-size-small;
+					height: 44px;
+				}
+	
+				.search-form:after {
+					content: none;
+				}
+			}
+			&.widget_list-post {
+				.article-image {
+					height: 65px;
+					margin-top: 7px;
+				}
+				.article-title-wrapper h5 {
+					font-weight: 500;
+					margin-bottom: 5px;
+					font-size: $font-size-small;
+					line-height: 24px;
+				}
+				.article-date {
+					font-size: $font-size-small;
+
+					.day{
+						position: relative;
+						padding-left: 25px;
+
+						&::before {
+							content: '';
+							position: absolute;
+							background-image: url("data:image/svg+xml,%3Csvg width='15' height='17' viewBox='0 0 15 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.75 1.30769H11.875V0.653846C11.875 0.480435 11.8092 0.314127 11.6919 0.191507C11.5747 0.0688871 11.4158 0 11.25 0C11.0842 0 10.9253 0.0688871 10.8081 0.191507C10.6908 0.314127 10.625 0.480435 10.625 0.653846V1.30769H4.375V0.653846C4.375 0.480435 4.30915 0.314127 4.19194 0.191507C4.07473 0.0688871 3.91576 0 3.75 0C3.58424 0 3.42527 0.0688871 3.30806 0.191507C3.19085 0.314127 3.125 0.480435 3.125 0.653846V1.30769H1.25C0.918479 1.30769 0.600537 1.44547 0.366116 1.69071C0.131696 1.93595 0 2.26856 0 2.61538V15.6923C0 16.0391 0.131696 16.3717 0.366116 16.617C0.600537 16.8622 0.918479 17 1.25 17H13.75C14.0815 17 14.3995 16.8622 14.6339 16.617C14.8683 16.3717 15 16.0391 15 15.6923V2.61538C15 2.26856 14.8683 1.93595 14.6339 1.69071C14.3995 1.44547 14.0815 1.30769 13.75 1.30769ZM3.125 2.61538V3.26923C3.125 3.44264 3.19085 3.60895 3.30806 3.73157C3.42527 3.85419 3.58424 3.92308 3.75 3.92308C3.91576 3.92308 4.07473 3.85419 4.19194 3.73157C4.30915 3.60895 4.375 3.44264 4.375 3.26923V2.61538H10.625V3.26923C10.625 3.44264 10.6908 3.60895 10.8081 3.73157C10.9253 3.85419 11.0842 3.92308 11.25 3.92308C11.4158 3.92308 11.5747 3.85419 11.6919 3.73157C11.8092 3.60895 11.875 3.44264 11.875 3.26923V2.61538H13.75V5.23077H1.25V2.61538H3.125ZM13.75 15.6923H1.25V6.53846H13.75V15.6923ZM10.7547 8.69125C10.8128 8.75197 10.8589 8.82409 10.8904 8.90346C10.9218 8.98284 10.938 9.06792 10.938 9.15385C10.938 9.23977 10.9218 9.32485 10.8904 9.40423C10.8589 9.48361 10.8128 9.55572 10.7547 9.61644L7.00469 13.5395C6.94664 13.6003 6.87771 13.6485 6.80184 13.6814C6.72596 13.7143 6.64463 13.7313 6.5625 13.7313C6.48037 13.7313 6.39904 13.7143 6.32316 13.6814C6.24729 13.6485 6.17836 13.6003 6.12031 13.5395L4.24531 11.578C4.12804 11.4553 4.06215 11.2889 4.06215 11.1154C4.06215 10.9419 4.12804 10.7755 4.24531 10.6528C4.36259 10.5301 4.52165 10.4612 4.6875 10.4612C4.85335 10.4612 5.01241 10.5301 5.12969 10.6528L6.5625 12.1525L9.87031 8.69125C9.92836 8.63046 9.99729 8.58223 10.0732 8.54933C10.149 8.51642 10.2304 8.49949 10.3125 8.49949C10.3946 8.49949 10.476 8.51642 10.5518 8.54933C10.6277 8.58223 10.6966 8.63046 10.7547 8.69125Z' fill='%23656565'/%3E%3C/svg%3E%0A");
+							width: 15px;
+							height: 17px;
+							left: 0;
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.sidebar .widget_list-post {
+	.thim-list-posts.sidebar .post-extra {
+		display: none;
+	}
+}
+
+
+// About blog sidebar
+.thim-sidebar-about-blog{
+	.thim-image{
+		position: relative;
+		margin-bottom: 10px;
+		max-width: 270px;
+		.thim-bg-color{
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			@include opacity(0.8);
+			z-index: 9;
+		}
+		img{
+			&.thim-logo{
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				top: 50%;
+				@include translate(0, -50%);
+				z-index: 10;
+			}
+		}
+	}
+	.thim-description{
+		word-break: break-all;
+	}
+}
+
+// Recent posts sidebar
+.thim-list-posts.sidebar{
+	.item-post{
+		clear: both;
+		margin-bottom: 20px;
+		overflow: hidden;
+		&:last-child{
+			margin-bottom: 10px;
+		}
+	}
+	.article-image{
+		float: left;
+		width: 100px;
+		margin-right: 20px;
+		height: 80px;
+		overflow: hidden;
+		img{
+			width: 100%;
+			margin-top: -10px;
+		}
+	}
+	.article-title-wrapper{
+		h5{
+			font-size: 16px;
+			font-weight: $thim_font_title_font_weight;
+			margin: 0;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2; 
+					line-clamp: 2; 
+			-webkit-box-orient: vertical;
+		}
+	}
+	.article-date{
+		font-size: 13px;
+		span{
+			margin-right: 5px;
+			&.month{
+				&:after{
+					content: ',';
+				}
+			}
+			&.year{
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+//Pinterest sidebar
+.thim-sidebar-pinterest{
+	padding-left: 2px;
+	padding-bottom: 2px;
+	padding-right: 2px;
+	span[class*='PIN_']{
+		max-width: 100%;
+		overflow: hidden;
+	}
+}
+
+//Widget heading your reservation
+#sidebar{
+	.wrapper-line-heading{
+		margin-bottom: 0;
+		margin-top: 69px;
+		padding: 39px 0 0;
+		text-align: center;
+		.heading__primary{
+			font-size: 24px;
+		}
+		.line-heading{
+			margin-top: 16px;
+			&:before,
+			&:after,
+			span:before,
+			span:after{
+			}
+		}
+	}
+	.elementor-widget-thim-search-room,
+	.thim-widget-search-room{
+		.wrapper-line-heading{
+			padding-top: 28px;
+			margin-top: 0;
+		}
+	}
+}
+//Widget search single room
+#sidebar{
+	.dk-option{
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.hotel-booking-search{
+		padding: 23px 30px 30px;
+		form{
+			.hb-form-field{
+				padding: 0;
+				label {
+					color: #FFF;
+				}
+			}
+			input,
+			select,
+			button{
+				width: 100%;
+				min-width: auto;
+				border-radius: 0;
+				font-size: 14px;
+				&.error{
+					border-color: red;
+					&:focus{
+						@include rounded(3px);
+					}
+				}
+			}
+			span {
+				font-size: 14px;
+			}
+			button{
+				border-color: transparent;
+				font-family: var(--thim_font_title-font-family);
+				font-size: 14px;
+				font-weight: 400;
+				text-transform: uppercase;
+			}
+			.hb-submit{
+				button {
+					height: fit-content;
+				}
+			}
+		}
+		.hb_input_field{
+			display: block;
+			&:after{
+				right: 12px;
+			}
+			.hb_input_date_check{
+				padding-right: 20px;
+				@media (max-width: 991px) {
+					padding-right: 30px;
+				}
+			}
+		}
+	}
+
+	.elementor-widget-thim-mini-cart-room,
+	.thim-widget-mini-cart-room{
+		border: 1px solid $border-color;
+		padding: 25px 20px;
+		.wrapper-line-heading{
+			margin: 0;
+			padding: 0;
+		}
+		.hb_mini_cart_footer .hb_button{
+			padding: 10px 12px;
+		}
+	}
+}
+ 
+
+/* fix error layout siderbar shortcode wp-hotel */
+#sidebar{
+	ul.rooms{
+		margin:0;
+		&.tp-hotel-booking{
+			li.hb_room{
+				margin-bottom: 10px;
+				width:100%;
+				padding:0;
+				.summary{
+					.title-room{
+						padding:15px 15px 0;
+					}
+					.description{
+						padding: 0 15px;
+						margin-top: 10px;
+					}
+					.footer-content-room{
+						.price{
+							padding: 10px 0 0;
+							margin:0;
+							text-align: center;
+							span{
+								font-size: 20px;
+							}
+						}
+						.actions{
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+		
+	}
+}
+
+
+/* end fix */

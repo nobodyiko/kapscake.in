@@ -1,0 +1,1344 @@
+.layout-special {
+	text-align: center;
+	padding: 0;
+
+	form {
+		display: table;
+		width: 767px;
+		margin: 0 auto;
+
+		.hb-form-table {
+			display: table-cell;
+			vertical-align: middle;
+			padding: 20px 0;
+			background-color: #ffffff;
+			box-shadow: 0px 15px 35px 0 rgba(0, 29, 44, 0.1);
+
+			.hb-form-field {
+				display: inline-block;
+				vertical-align: middle;
+				border-right: 1px solid #eee;
+				margin: 0;
+				width: 33.33%;
+
+				.label {
+					font-size: 16px;
+					font-weight: 300;
+					font-style: normal;
+					font-stretch: semi-condensed;
+					line-height: normal;
+					letter-spacing: 0.8px;
+					text-align: center;
+					color: #5f5f5f;
+					text-transform: uppercase;
+				}
+
+				.hb-form-field-input {
+
+					input.day,
+					select {
+						min-width: 70px;
+						font-size: 50px;
+						font-weight: 400;
+						font-style: normal;
+						font-stretch: normal;
+						letter-spacing: 3px;
+						text-align: center;
+						color: #1c1c1c;
+						line-height: 50px;
+						width: 60px;
+						border: none;
+						height: 65px;
+					}
+
+					input.month {
+						font-size: 14px;
+						font-weight: 400;
+						font-style: normal;
+						font-stretch: normal;
+						line-height: normal;
+						letter-spacing: .8px;
+						text-align: center;
+						color: #5f5f5f;
+						min-width: 30px;
+						width: 30px;
+						border: none;
+						padding: 0;
+						top: -23px;
+						background: transparent;
+					}
+
+					button.ui-datepicker-trigger {
+						top: 12px;
+						left: 0px;
+						width: 100%;
+						height: 100%;
+						min-width: 30px;
+
+						i {
+							margin-top: 34px;
+
+							&:before {
+								content: '\f3d0';
+								font-family: Ionicons;
+							}
+						}
+					}
+
+					.select2-container {
+						width: 50% !important;
+						float: left;
+						text-align: right;
+
+						.select2-selection--single {
+							pointer-events: none;
+							cursor: default;
+							text-decoration: none;
+							height: 65px;
+							border: none;
+
+							.select2-selection__rendered {
+								font-size: 50px;
+								line-height: 68px;
+								padding: 0 5px;
+							}
+
+							.select2-selection__arrow {
+								display: none;
+							}
+						}
+					}
+
+					//new
+					.nav-guest,
+					.nav-child {
+						transform: translate(0, 10px);
+						width: 50%;
+						float: left;
+						text-align: left;
+						padding: 0 10px;
+
+						span {
+							display: block;
+							font-size: 18px;
+
+							&:hover {
+								color: #c19b76;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		p.hb-submit {
+			display: table-cell;
+			padding: 0;
+			width: 190px;
+
+			button {
+				font-size: 16px;
+				font-weight: normal;
+				font-style: normal;
+				font-stretch: semi-condensed;
+				line-height: 1.5;
+				letter-spacing: 0.8px;
+				text-align: center;
+				color: #ffffff;
+				text-transform: uppercase;
+				border-radius: 0;
+				height: auto;
+				padding: 42px 0;
+				background: #3b3b3b;
+				border: none transparent;
+
+				&.hb_loading {
+					&:before {
+						border: none;
+						border-radius: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&.has-child {
+		form {
+			width: 900px;
+
+			.hb-form-table {
+				.hb-form-field {
+					width: 25%;
+				}
+			}
+		}
+	}
+}
+
+#sidebar .layout-special .hb-form-table .hb-form-field .hb-form-field-input input.day,
+#sidebar .layout-special .hb-form-table .hb-form-field .hb-form-field-input select {
+	height: 100px;
+}
+
+#sidebar .layout-special .hb-form-table .hb-form-field .hb-form-field-input button.ui-datepicker-trigger i {
+	display: none;
+}
+
+#sidebar .layout-special .hb-form-table .hb-form-field {
+	border: none;
+}
+
+#sidebar .layout-special p.hb-submit {
+	display: block;
+}
+
+.thim-search-home1 {
+	.thim-search-room {
+		padding: 50px 70px 50px 0;
+		position: relative;
+		background-image: linear-gradient(to bottom left, transparent 50%, #f3f3f3 50%), linear-gradient(#f3f3f3, #f3f3f3), linear-gradient(#f3f3f3, #f3f3f3);
+		background-size: 38px 38px, 100% 100%, 100% 100%;
+		background-position: 100% 100%, -38px 0%, 100% 38px;
+		background-repeat: no-repeat;
+
+		@media(max-width:991px) {
+			padding: 50px 15px 50px 0;
+		}
+
+		@media(max-width:767px) {
+			padding: 50px 15px 50px 35px;
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			height: 100%;
+			background: #f3f3f3;
+			width: 100%;
+			left: -99%;
+			top: 0;
+
+			@media(max-width:767px) {
+				display: none;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			content: '';
+			width: 0;
+			height: 0;
+			top: 0;
+			right: 0;
+			border-right: 38px solid transparent;
+			border-bottom: 38px solid #c2c2c2;
+		}
+
+		.hotel-booking-search {
+			form {
+				padding: 0;
+				display: flex;
+
+				@media(max-width:780px) {
+					display: block;
+				}
+
+				.hb-form-table {
+					.hb-form-field {
+						padding: 0 20px 0 0;
+
+						&:hover {
+
+							input,
+							button,
+							select {
+								border: 1px solid var(--thim_body_primary_color);
+							}
+						}
+
+						.hb-form-field-list {
+							margin-left: 0;
+						}
+					}
+				}
+
+				.hb-submit {
+					padding: 0;
+
+					@media(max-width:767px) {
+						padding-right: 20px;
+					}
+
+					button {
+						text-transform: uppercase;
+						font-size: 14px;
+
+						@media(max-width: 991px) {
+							font-size: 13px;
+						}
+					}
+				}
+			}
+
+			input,
+			button,
+			select {
+				line-height: 50px;
+				height: unset;
+				height: 50px;
+				font-size: 16px;
+				cursor: pointer;
+				border: 1px solid transparent;
+				border-radius: unset;
+
+				@media(max-width: 991px) {
+					font-size: 14px;
+				}
+			}
+
+			.hb-form-field #adults,
+			.hb-form-field #child {
+				border: 1px solid transparent;
+			}
+		}
+
+	}
+}
+
+.widget_hb_widget_search {
+	.thim-search-room .hotel-booking-search .hb-form-field .hb_input_field .hb_input_date_check {
+		padding-right: 30px;
+	}
+}
+
+.hotel-booking-search {
+	padding: 0;
+
+	form.layout-multidate {
+		display: inline-block;
+		width: 100%;
+		padding: 0;
+		background: #ffffff;
+		position: relative;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
+
+		.hb-form-table {
+			background: #ffffff;
+			width: 86%;
+			float: left;
+			margin: 0px;
+			position: relative;
+
+			.multidate {
+				position: absolute;
+				font-size: $thim_font_body_font_size;
+				opacity: 0;
+				height: 100%;
+				width: 40%;
+				border: none;
+				z-index: 2;
+				background: none;
+				cursor: pointer;
+				left: 0;
+			}
+
+			.hb-form-field {
+				width: 30%;
+				float: left;
+				padding: 25px 20px 25px 30px;
+				position: relative;
+				margin: 0;
+
+				&.hb-form-check-in-check-out {
+					width: 40%;
+					max-width: none;
+
+					.hb-form-field-input {
+						padding-left: 25px;
+						display: inline-block;
+
+						#day,
+						#day2 {
+							width: 30px;
+						}
+
+						&:last-child {
+							padding: 0;
+
+							button {
+								display: none;
+							}
+						}
+					}
+
+					span {
+						color: #FF0000;
+						padding-left: 4px;
+					}
+
+					&::after {
+						content: '';
+						background: url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2212%22%20height%3D%227%22%20viewBox%3D%220%200%2012%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20opacity%3D%220.2%22%20d%3D%22M0.275392%200.274999C0.458725%200.0916658%200.692057%20-4.57148e-07%200.97539%20-4.44763e-07C1.25872%20-4.32378e-07%201.49206%200.0916659%201.67539%200.274999L5.57539%204.175L9.47539%200.275C9.65872%200.0916662%209.89206%20-5.50035e-08%2010.1754%20-4.26186e-08C10.4587%20-3.02337e-08%2010.6921%200.0916663%2010.8754%200.275C11.0587%200.458333%2011.1504%200.691666%2011.1504%200.974999C11.1504%201.25833%2011.0587%201.49167%2010.8754%201.675L6.27539%206.275C6.17539%206.375%206.06706%206.446%205.95039%206.488C5.83372%206.52933%205.70872%206.55%205.57539%206.55C5.44206%206.55%205.31706%206.52933%205.20039%206.488C5.08372%206.446%204.97539%206.375%204.87539%206.275L0.275392%201.675C0.0920581%201.49167%200.000389998%201.25833%200.00039001%200.974999C0.000390023%200.691666%200.0920582%200.458332%200.275392%200.274999Z%22%20fill%3D%22black%22%2F%3E%0A%3C%2Fsvg%3E%0A) no-repeat;
+						-webkit-appearance: none;
+						-moz-appearance: none;
+						background-position-x: 95%;
+						background-position-y: 50%;
+						cursor: pointer;
+						position: absolute;
+						width: 20px;
+						height: 20px;
+						right: 30px;
+					}
+				}
+
+				&.hb-form-number {
+					.hb-form-field-input {
+						display: inline-block;
+						width: 100%;
+						cursor: pointer;
+						z-index: 2;
+
+						input {
+							width: 100%;
+						}
+
+						&.guests-number,
+						&.child-number {
+							width: auto;
+						}
+					}
+
+					&:before {
+						content: '';
+						position: absolute;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						width: 1px;
+						background: $border-color;
+					}
+
+					.hb-form-field-list {
+						opacity: 0;
+						visibility: hidden;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						width: 100%;
+						padding: 30px;
+						background: #ffffff;
+						z-index: 9;
+						margin: 5px 0 0 0;
+						@include box-shadow(0px 4px 15px rgba(0, 0, 0, 0.07));
+						@include transition(all 0.5s);
+						border: none;
+						display: flex;
+						justify-content: space-between;
+						align-items: center;
+
+						&.active {
+							opacity: 1;
+							visibility: visible;
+						}
+
+						.hb-form-field-input {
+							margin-bottom: 0;
+							margin-left: 25px;
+							margin-right: 25px;
+
+							&:last-child {
+								margin: 0;
+							}
+						}
+
+						.number-box {
+							border: 2px solid #000000;
+							padding: 6px 8px;
+
+							.number-icons {
+								cursor: pointer;
+								float: none;
+								background: transparent;
+								color: #000;
+								margin-left: 0;
+								height: auto;
+							}
+						}
+
+						.name {
+							font-weight: 500;
+							font-family: $thim_font_title_font_family;
+							color: #000;
+						}
+					}
+				}
+
+				.label {
+					text-transform: uppercase;
+					font-weight: 500;
+					font-size: $thim_font_body_font_size;
+					font-family: $thim_font_title_font_family;
+					color: #000;
+					margin-bottom: 10px;
+					label {
+						font-weight: 500;
+					}
+				}
+
+				.hb_input_field {
+					input {
+						width: 110px;
+						height: auto;
+						border: none;
+						border-radius: 0;
+						line-height: 1;
+						min-width: 0;
+						background: none;
+						padding: 0;
+						font-size: $thim_font_body_font_size;
+						color: $thim_font_body_color;
+						cursor: pointer;
+						text-transform: capitalize;
+					}
+
+					input.day,
+					.getWidth {
+						padding: 0;
+					}
+
+					&:after {
+						display: none;
+					}
+
+					button {
+						position: absolute;
+						left: 0;
+						top: 0;
+						height: 100%;
+						width: 100%;
+						background: none;
+						border: none;
+						padding: 0;
+						-webkit-mask-position-x: 0px !important;
+					}
+				}
+			}
+		}
+
+		.select2-container,
+		select {
+			width: auto !important;
+			pointer-events: none;
+		}
+
+		.select2-container--default {
+			.select2-selection--single {
+				border: none;
+
+				.select2-selection__arrow {
+					display: none;
+				}
+
+				.select2-selection__rendered {
+					padding: 0;
+				}
+			}
+		}
+
+		.daterangepicker.dropdown-menu {
+			display: none;
+			width: 672px;
+			padding: 0;
+			border-radius: 0;
+			padding: 15px 24px 30px;
+			margin-top: 5px;
+			@include box-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+			@include transition(all 0.5s);
+
+			.daterangepicker_input {
+				display: none;
+			}
+
+			.calendar {
+				width: 50%;
+				margin: 0;
+				max-width: 312px;
+
+				&.left {
+					padding-right: 15px;
+				}
+
+				&.right {
+					padding-left: 15px;
+				}
+
+				.calendar-table {
+					padding: 0;
+				}
+
+				table {
+					border: none;
+				}
+
+				tr {
+					border: none;
+				}
+
+				th {
+					border: none;
+					width: 40px;
+					height: 40px;
+					padding: 0;
+					min-width: 40px;
+					font-weight: normal;
+
+					&.available {
+						text-align: center;
+						font-size: $thim_font_body_font_size;
+						line-height: 40px;
+						color: #000;
+						display: inline-block;
+						float: right;
+						margin-left: 12px;
+						cursor: pointer;
+						border: none;
+						margin: 0;
+						border-radius: 0;
+						padding: 0;
+						font-weight: normal;
+
+						i {
+							display: none;
+						}
+
+						&.prev {
+							&:before {
+								content: "\f3cf";
+								font-family: "Ionicons";
+							}
+						}
+
+						&.next {
+							&:before {
+								content: "\f3d1";
+								font-family: "Ionicons";
+							}
+						}
+					}
+
+					&.month {
+						font-weight: 600;
+						font-size: 14px;
+						font-family: $thim_font_title_font_family;
+						color: #000;
+					}
+				}
+
+				thead {
+					th {
+						font-size: 14px;
+					}
+				}
+
+				tbody {
+					td {
+						border-radius: 0;
+						padding: 0;
+						font-size: 14px;
+						width: 40px;
+						height: 40px;
+						color: #636363;
+
+						&.off {
+							color: #999999;
+						}
+
+						&:hover {
+							color: #636363;
+						}
+
+						&.active {
+							color: #fff;
+						}
+
+						&.in-range {
+							&:hover {
+								color: #333333;
+							}
+						}
+
+						&.active:hover {
+							color: #ffffff;
+						}
+					}
+				}
+			}
+		}
+
+		.hb-submit {
+			width: 14%;
+			position: absolute;
+			right: 0;
+			height: 100%;
+			left: auto;
+			top: 0;
+
+			button {
+				width: 100%;
+				margin-top: 0;
+				font-size: $thim_font_body_font_size;
+				font-weight: 600;
+				padding: 10px;
+				text-align: center;
+				border: none;
+				height: 100%;
+				border-radius: 0;
+				min-width: 0;
+				text-transform: uppercase;
+				font-family: $thim_font_title_font_family;
+			}
+		}
+
+	}
+}
+
+.wp-hotel-booking-search-rooms {
+	.hotel-booking-search form.layout-multidate {
+		max-width: 100%;
+		box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
+
+		.hb-form-table {
+			margin: 0;
+			width: 86%;
+
+			.hb-form-field {
+				width: 30%;
+				max-width: none;
+				padding: 25px 20px 25px 30px;
+
+				&.hb-form-check-in-check-out {
+					width: 40%;
+				}
+			}
+		}
+
+		.hb-submit {
+			padding: 0;
+			width: 14%;
+
+			button {
+				height: 100%;
+				font-weight: $thim_font_title_font_weight;
+				line-height: 1.3em;
+				font-size: $thim_font_body_font_size;
+			}
+		}
+	}
+
+	.hotel-booking-search {
+		form.layout-multidate+#hotel-booking-results form {
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .multidate,
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-check-in-check-out {
+		width: 50%;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field {
+		width: 25%;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-number .hb-form-field-list {
+		padding: 15px;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-number .hb-form-field-list .number-box {
+		padding: 4px 0px;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-number .hb-form-field-list .hb-form-field-input {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+@media (max-width: 992px) {
+	.hotel-booking-search form.layout-multidate .hb-form-table {
+		width: 82%;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-submit {
+		width: 18%;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-check-in-check-out::after {
+		right: 15px;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field {
+		padding: 20px 10px 20px 20px;
+	}
+
+	.wp-hotel-booking-search-rooms {
+		overflow-x: hidden;
+
+		.hotel-booking-search form.layout-multidate .hb-form-table {
+			width: 82%;
+			float: left;
+		}
+
+		.hotel-booking-search form.layout-multidate .hb-submit {
+			width: 18%;
+		}
+
+		.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-check-in-check-out::after {
+			right: 15px;
+		}
+
+		.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field {
+			padding: 20px 10px 20px 20px;
+			width: 25% !important;
+			float: left;
+			margin-bottom: 0;
+		}
+
+		.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-check-in-check-out {
+			width: 50% !important;
+		}
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-number .hb-form-field-list {
+		display: block;
+
+		.number-box {
+			display: flex;
+			justify-content: center;
+			margin-top: 10px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .multidate,
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-check-in-check-out,
+	.hotel-booking-search form.layout-multidate .hb-form-table {
+		width: 100%;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .multidate {
+		height: 33%;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-submit {
+		width: 100%;
+		position: unset;
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field {
+		width: 100%;
+	}
+
+	.hotel-booking-search form.layout-multidate .daterangepicker.dropdown-menu {
+		width: 100%;
+	}
+
+	.wp-hotel-booking-search-rooms {
+
+		.hotel-booking-search form.layout-multidate .hb-form-table .multidate,
+		.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-check-in-check-out,
+		.hotel-booking-search form.layout-multidate .hb-form-table {
+			width: 100% !important;
+		}
+
+		.hotel-booking-search form.layout-multidate .hb-submit {
+			width: 100%;
+			position: unset;
+		}
+
+		.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field {
+			width: 100% !important;
+		}
+
+		.hotel-booking-search form.layout-multidate .daterangepicker.dropdown-menu {
+			width: 100%;
+		}
+		.hotel-booking-search form.layout-multidate {
+			padding: 0;
+		}
+	}
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-number:before {
+		height: 1px;
+    	width: 100%;
+	}
+
+	.hotel-booking-search form.layout-multidate .daterangepicker.dropdown-menu .calendar {
+		&.left {
+			width: 100%;
+			padding: 0;
+			max-width: 100%;
+		}
+
+		&.right {
+			padding: 0;
+
+			th.available.next {
+				display: block;
+			}
+
+			tbody {
+				display: none;
+			}
+
+			thead th {
+				display: none;
+			}
+
+			.table-condensed {
+				position: absolute;
+				top: 75px;
+				right: 30px;
+				width: 40px;
+			}
+		}
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-number .hb-form-field-list {
+		display: flex;
+		padding: 20px;
+		margin: 0;
+
+		.number-box {
+			margin-top: 0;
+			padding: 5px 10px;
+		}
+	}
+
+	.hotel-booking-search form.layout-multidate .hb-form-table .hb-form-field.hb-form-check-in-check-out::after {
+		right: 27px;
+	}
+}
+
+/*MultiDate*/
+/* Calendars */
+.daterangepicker {
+	position: absolute;
+	color: inherit;
+	background-color: #fff;
+
+	.label {
+		text-align: center;
+		padding-bottom: 12px;
+		border-bottom: 2px solid #78D0C5;
+		margin-bottom: 20px;
+	}
+}
+
+.daterangepicker.opensleft:before {
+	right: 9px;
+}
+
+.daterangepicker.opensleft:after {
+	right: 10px;
+}
+
+.daterangepicker.openscenter:before {
+	left: 0;
+	right: 0;
+	width: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.daterangepicker.openscenter:after {
+	left: 0;
+	right: 0;
+	width: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.daterangepicker.opensright:before {
+	left: 9px;
+}
+
+.daterangepicker.opensright:after {
+	left: 10px;
+}
+
+.daterangepicker.dropup {
+	margin-top: -5px;
+}
+
+.daterangepicker.dropup:before {
+	top: initial;
+	bottom: -7px;
+	border-bottom: initial;
+	border-top: 7px solid #ccc;
+}
+
+.daterangepicker.dropup:after {
+	top: initial;
+	bottom: -6px;
+	border-bottom: initial;
+	border-top: 6px solid #fff;
+}
+
+.daterangepicker.dropdown-menu {
+	max-width: none;
+	z-index: 9;
+}
+
+.daterangepicker.single .ranges,
+.daterangepicker.single .calendar {
+	float: none;
+}
+
+.daterangepicker.show-calendar .calendar {
+	display: block;
+}
+
+.daterangepicker .calendar {
+	display: none;
+	max-width: 270px;
+	margin: 4px;
+}
+
+.daterangepicker .calendar.single .calendar-table {
+	border: none;
+}
+
+.daterangepicker .calendar th,
+.daterangepicker .calendar td {
+	white-space: nowrap;
+	text-align: center;
+	min-width: 32px;
+}
+
+.daterangepicker .calendar-table {
+	border: 1px solid #fff;
+	padding: 4px;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+.daterangepicker table {
+	width: 100%;
+	margin: 0;
+}
+
+.daterangepicker td,
+.daterangepicker th {
+	text-align: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 4px;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover {
+	background-color: #eee;
+	border-color: transparent;
+	color: inherit;
+}
+
+.daterangepicker td.week,
+.daterangepicker th.week {
+	font-size: 80%;
+	color: #ccc;
+}
+
+.daterangepicker td.off,
+.daterangepicker td.off.in-range,
+.daterangepicker td.off.start-date,
+.daterangepicker td.off.end-date {
+	background-color: #fff;
+	border-color: transparent;
+	color: #999;
+}
+
+.daterangepicker td.in-range {
+	background-color: #ECECEC;
+	border-color: transparent;
+	color: #000;
+	border-radius: 0;
+}
+
+.daterangepicker td.start-date {
+	border-radius: 4px 0 0 4px;
+}
+
+.daterangepicker td.end-date {
+	border-radius: 0 4px 4px 0;
+}
+
+.daterangepicker td.start-date.end-date {
+	border-radius: 4px;
+}
+
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+	background-color: #2A7AF2;
+	border-color: transparent;
+	color: #fff;
+}
+
+.daterangepicker th.month {
+	width: auto;
+}
+
+.daterangepicker td.disabled,
+.daterangepicker option.disabled {
+	color: #999;
+	cursor: not-allowed;
+	text-decoration: line-through;
+}
+
+.daterangepicker select.monthselect,
+.daterangepicker select.yearselect {
+	font-size: 12px;
+	padding: 1px;
+	height: auto;
+	margin: 0;
+	cursor: default;
+}
+
+.daterangepicker select.monthselect {
+	margin-right: 2%;
+	width: 56%;
+}
+
+.daterangepicker select.yearselect {
+	width: 40%;
+}
+
+.daterangepicker select.hourselect,
+.daterangepicker select.minuteselect,
+.daterangepicker select.secondselect,
+.daterangepicker select.ampmselect {
+	width: 50px;
+	margin-bottom: 0;
+}
+
+.daterangepicker .input-mini {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	color: #555;
+	height: 30px;
+	line-height: 30px;
+	display: block;
+	vertical-align: middle;
+	margin: 0 0 5px 0;
+	padding: 0 6px 0 28px;
+	width: 100%;
+}
+
+.daterangepicker .input-mini.active {
+	border: 1px solid #08c;
+	border-radius: 4px;
+}
+
+.daterangepicker .daterangepicker_input {
+	position: relative;
+}
+
+.daterangepicker .daterangepicker_input i {
+	position: absolute;
+	left: 8px;
+	top: 8px;
+}
+
+.daterangepicker.rtl .input-mini {
+	padding-right: 28px;
+	padding-left: 6px;
+}
+
+.daterangepicker.rtl .daterangepicker_input i {
+	left: auto;
+	right: 8px;
+}
+
+.daterangepicker .calendar-time {
+	text-align: center;
+	margin: 5px auto;
+	line-height: 30px;
+	position: relative;
+	padding-left: 28px;
+}
+
+.daterangepicker .calendar-time select.disabled {
+	color: #ccc;
+	cursor: not-allowed;
+}
+
+.ranges {
+	font-size: 11px;
+	float: none;
+	margin: 4px;
+	text-align: left;
+}
+
+.ranges ul {
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+}
+
+.ranges li {
+	font-size: 13px;
+	background-color: #f5f5f5;
+	border: 1px solid #f5f5f5;
+	border-radius: 4px;
+	color: #08c;
+	padding: 3px 12px;
+	margin-bottom: 8px;
+	cursor: pointer;
+}
+
+.ranges li:hover {
+	background-color: #08c;
+	border: 1px solid #08c;
+	color: #fff;
+}
+
+.ranges li.active {
+	background-color: #08c;
+	border: 1px solid #08c;
+	color: #fff;
+}
+
+/*  Larger Screen Styling */
+@media (min-width: 564px) {
+	.daterangepicker {
+		width: auto;
+	}
+
+	.daterangepicker .ranges ul {
+		width: 160px;
+	}
+
+	.daterangepicker.single .ranges ul {
+		width: 100%;
+	}
+
+	.daterangepicker.single .calendar.left {
+		clear: none;
+	}
+
+	.daterangepicker.single.ltr .ranges,
+	.daterangepicker.single.ltr .calendar {
+		float: left;
+	}
+
+	.daterangepicker.single.rtl .ranges,
+	.daterangepicker.single.rtl .calendar {
+		float: right;
+	}
+
+	.daterangepicker.ltr {
+		direction: ltr;
+		text-align: left;
+	}
+
+	.daterangepicker.ltr .calendar.left {
+		clear: left;
+		margin-right: 0;
+	}
+
+	.daterangepicker.ltr .calendar.left .calendar-table {
+		border-right: none;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.daterangepicker.ltr .calendar.right {
+		margin-left: 0;
+	}
+
+	.daterangepicker.ltr .calendar.right .calendar-table {
+		border-left: none;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	.daterangepicker.ltr .left .daterangepicker_input {
+		padding-right: 12px;
+	}
+
+	.daterangepicker.ltr .calendar.left .calendar-table {
+		padding-right: 12px;
+	}
+
+	.daterangepicker.ltr .ranges,
+	.daterangepicker.ltr .calendar {
+		float: left;
+	}
+
+	.daterangepicker.rtl {
+		direction: rtl;
+		text-align: right;
+	}
+
+	.daterangepicker.rtl .calendar.left {
+		clear: right;
+		margin-left: 0;
+	}
+
+	.daterangepicker.rtl .calendar.left .calendar-table {
+		border-left: none;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	.daterangepicker.rtl .calendar.right {
+		margin-right: 0;
+	}
+
+	.daterangepicker.rtl .calendar.right .calendar-table {
+		border-right: none;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.daterangepicker.rtl .left .daterangepicker_input {
+		padding-left: 12px;
+	}
+
+	.daterangepicker.rtl .calendar.left .calendar-table {
+		padding-left: 12px;
+	}
+
+	.daterangepicker.rtl .ranges,
+	.daterangepicker.rtl .calendar {
+		text-align: right;
+		float: right;
+	}
+}
+
+@media (min-width: 730px) {
+	.daterangepicker .ranges {
+		width: auto;
+	}
+
+	.daterangepicker.ltr .ranges {
+		float: left;
+	}
+
+	.daterangepicker.rtl .ranges {
+		float: right;
+	}
+
+	.daterangepicker .calendar.left {
+		clear: none !important;
+	}
+}
